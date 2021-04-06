@@ -6,6 +6,7 @@ const hbs = require('hbs');
 const cors = require('cors')
 
 const app = express();
+const port = process.env.PORT || 80
 
 app.use(cors())
 
@@ -100,6 +101,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(80, () => {
-    console.log('Server is up on port 80.')
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}.`)
 })
